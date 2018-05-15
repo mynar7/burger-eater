@@ -1,0 +1,14 @@
+body {
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+}
+li {
+    text-align: left;
+    display: flex;
+    width: 500px;
+}
+
+li>button {
+    margin-left: auto;
+}

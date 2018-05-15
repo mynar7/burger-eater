@@ -1,0 +1,24 @@
+<h1>Eat Da Burger</h1>
+
+<h2>Eat a Burger!</h2>
+<ul>
+    {{#each burgers}}
+        {{#unless devoured}}
+            <li>{{burger_name}}<button class='burgerEater' id={{id}}>DEVOUR IT</button></li>
+        {{/unless}}
+    {{/each}}
+</ul>
+
+<h3>Devoured Burgers</h3>
+<ul>
+    {{#each burgers}}
+        {{#if devoured}}
+        <li>{{burger_name}}</li>
+        {{/if}}
+    {{/each}}
+</ul>
+
+<form action="/api/new" method="POST">
+    <label for="burgerName">Name your Burger!<input type="text" name="burgerName" id="burgerName"></label>
+    <button type="submit">ADD BURGER</button>
+</form>
